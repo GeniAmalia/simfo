@@ -13,7 +13,7 @@
     </ul>
     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-            <a href="/login" class="nav=link navbar-light"><ion-icon name="log-in">Login</a></ion-icon>
+            <a href="/login" class="nav=link navbar-light"><ion-icon name="log-in">Login Test Update</a></ion-icon>
         </li>
     </ul>
 </nav>
