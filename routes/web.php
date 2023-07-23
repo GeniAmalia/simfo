@@ -18,7 +18,7 @@ use App\Http\Controllers\RegisterController;
 // Route::get('/home', [LoginController::class, 'index']);
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Dashboard"
     ]
 );
 });
@@ -37,7 +37,29 @@ Route::get('/register', function() {
 });
 
 Route::post('/register', function() {
-    return view('register', [
-        'title' => 'Register'
+    return view('home', [
+        'title' => 'Dashboard'
+    ]);
+});
+
+Route::get('/organisasi', function() {
+    return view('organisasi', [
+        'title' => 'Organisasi'
+    ]);
+});
+Route::get('/input-organisasi', function() {
+    return view('input-organisasi', [
+        'title' => 'organisasi'
+    ]);
+});
+
+Route::get('/forum', function() {
+    return view('forum', [
+        'title' => 'Forum'
+    ]);
+});
+Route::get('/berita', function() {
+    return view('berita', [
+        'title' => 'Berita'
     ]);
 });

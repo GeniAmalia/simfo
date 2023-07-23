@@ -30,8 +30,7 @@
 </head>
 <body>
     @include('layouts.header')
-    @include('layouts.side_menu')
-    @include('layouts.top_menu')
+    @include('navbar.navbar')
     <div class="container mt-4">
         @yield('container')
     </div>

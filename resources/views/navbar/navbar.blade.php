@@ -1,4 +1,16 @@
+<nav class="main-header navbar navbar-expand navbar-warning navbar-dark">
 
+    <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a href="/login" class="nav=link navbar-light"><ion-icon name="log-in">Login</a></ion-icon>
+        </li>
+    </ul>
+</nav>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="index3.html" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -12,43 +24,41 @@
     <div class="info">
         <a href="#" class="d-block">Rahayu Wahyuni Pratiwi</a>
     </div>
-    <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-        <button class="btn btn-sidebar">
-        <i class="fas fa-search fa-fw"></i>
-        </button>
-        </div>
-        </div>
-    </div>
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/" class="nav-link">
         <i class="nav-icon fas fa-home"></i>
         <p>Dashboard</p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="organisasi" class="nav-link">
         <i class="nav-icon fas fa-document-text"></i>
         <p>Data Organisasi</p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/forum" class="nav-link">
         <i class="nav-icon fas fa-messages"></i>
         <p>Forum/Diskusi</p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/berita" class="nav-link">
         <i class="nav-icon fas fa-newspaper"></i>
         <p>Berita/News</p>
         </a>
     </li>
+    <li class="nav-item d-none d-sm-inline-block">
+        <a href="/about" class="nav-link">
+            <i class="nav-icon fas fa-information"></i>
+            <p>About</p>
+            </a>
+    </li>
     </ul>
+    </ul>
+    
 
 </nav>
 </div>
