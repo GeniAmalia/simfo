@@ -27,7 +27,7 @@
     <li class="nav-item">
         <a href="#" class="nav-link">
         <i class="nav-icon fas fa-home"></i>
-        <p>Dashboard Test Update</p>
+        <p>Dashboard</p>
         </a>
     </li>
     <li class="nav-item">
@@ -39,31 +39,13 @@
     <li class="nav-item">
         <a href="#" class="nav-link">
         <i class="nav-icon fas fa-messages"></i>
-        <p>Diskusi</p>
+        <p>Forum/Diskusi</p>
         </a>
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link">
         <i class="nav-icon fas fa-newspaper"></i>
         <p>Berita/News</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-archive"></i>
-        <p>Layanan</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-ellipsis-vertical"></i>
-        <p>Pengumuman</p>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-reader"></i>
-        <p>Form Pendaftaran </p>
         </a>
     </li>
     </ul>
