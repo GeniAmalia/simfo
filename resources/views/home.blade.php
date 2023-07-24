@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Dashboard Test Update from M. Afifah</h1>
+                <h1 class="m-0">Dashboard</h1>
             </div>
 </div>
 <section class="content">
@@ -66,13 +66,15 @@
     </section>
     
     </div>
-<footer class="main-footer">
+    <Section class="footer">
+        <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
         <div class="float-right d-none d-sm-inline-block">
             <b>Version</b> 3.2.0
         </div>
-</footer>
+        </footer>
+</Section>
     </div>
         <script src="plugins/jquery/jquery.min.js"></script>
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

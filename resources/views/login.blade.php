@@ -23,35 +23,39 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Login to start your session</p>
-        <form action="../../index3.html" method="post">
+        <form action="/login" method="post">
+            @csrf
             <div class="input-group mb-3">
-        <input type="email" class="form-control" placeholder="Email">
-            <div class="input-group-append">
+                <div class="input-group-append">
         <div class="input-group-text">
         <span class="fas fa-envelope"></span>
     </div>
 </div>
+        <input type="email" name='email' class="form-control @error ('email') is-invalid 
+        @enderror" id='email' placeholder="name@example.com" autofocus required value="{{ old ('email') }}">
+            @error('email')
+            <div class="invalid-feedback">
+                {{ $message}}
+            </div>
+            @enderror
 </div>
     <div class="input-group mb-3">
-        <input type="password" class="form-control" placeholder="Password">
         <div class="input-group-append">
-    <div class="input-group-text">
-    <span class="fas fa-lock"></span>
-    </div>
-</div>
+            <div class="input-group-text">
+            <span class="fas fa-lock"></span>
+            </div>
+        </div>
+        <input type="password" class="form-control" placeholder="Password" id="password" required>
 </div>
 
-<div class="col-4">
-<button type="submit" class="btn btn-primary btn-block">Log in</button>
+<div class="text-center">
+<button type="submit" class="btn btn-primary my-6">Log in</button>
 </div>
 
 </div>
 </form>
 <p class="mb-1">
 <a href="forgot-password.html">I forgot my password</a>
-</p>
-<p class="mb-0">
-    Not Registered?<a href="/register" class="text-center">Register organisasi Now!</a>
 </p>
 </div>
 
