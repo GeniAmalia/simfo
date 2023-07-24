@@ -17,8 +17,22 @@
     <body class="hold-transition login-page">
     <div class="login-box">
     <div class="login-logo">
-    <a href="../../index2.html"><b>SIOMA</b>login</a>
+    <a><b>SIOMA</b>login</a>
 </div>
+
+@if (session()->has('success'))
+<div class="alert alert-success alert-dismisssible fade show" role="alert">
+    {{ session('success')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if (session()->has('LoginError'))
+<div class="alert alert-success alert-dismisssible fade show" role="alert">
+    {{ session('LoginError')}}
+    <button type="button" class='button-close' data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
 
     <div class="card">
         <div class="card-body login-card-body">
@@ -49,7 +63,7 @@
 </div>
 
 <div class="text-center">
-<button type="submit" class="btn btn-primary my-6">Log in</button>
+<button type="submit" class="btn btn-primary my-6">Login</button>
 </div>
 
 </div>
