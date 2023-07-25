@@ -1,4 +1,4 @@
-@extends('Dashboard.main')
+@extends('dashboard.main')
 @section('container')
 
 <section class="content">

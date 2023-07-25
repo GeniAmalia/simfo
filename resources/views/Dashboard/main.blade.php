@@ -12,12 +12,12 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 </div>
-@include('Dashboard.navbar')
+@include('dashboard.navbar')
 
 {{-- sidebar --}}
 <div class="container-fluid">
     <div class="row">
-        @include('Dashboard.sidebar')
+        @include('dashboard.sidebar')
     </div>
 </div>
     {{-- content --}}
