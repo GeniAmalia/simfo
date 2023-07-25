@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrganisasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +24,13 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
-Route::get('/organisasi', function() {
-    return view('organisasi', [
-        'title' => 'Organisasi'
-    ]);
-});
-Route::get('/input-organisasi', function() {
-    return view('input-organisasi', [
-        'title' => 'organisasi'
-    ]);
-});
+// organisasi
+Route::resource('/organisasi/organisasi', OrganisasiController::class)->middleware('auth');
+// Route::get('/organisasi', function() {
+//     return view('organisasi', [
+//         'title' => 'Organisasi'
+//     ]);
+// });
 
 Route::get('/forum', function() {
     return view('forum', [

@@ -9,8 +9,7 @@
         <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
     </div>
     <div class="info">
-        <h1 class="{{ Auth()->user()->name}}"></h1>
-        {{-- <a href="#" class="d-block">Rahayu Wahyuni Pratiwi</a> --}}
+        <a href="#" class="d-block">Rahayu Wahyuni Pratiwi</a>
     </div>
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -21,19 +20,19 @@
         </a>
     </li>
     <li class="nav-item">
-        <a href="organisasi" class="nav-link">
+        <a href="/organisasi/organisasi" class="nav-link">
             <ion-icon name="document-text-sharp"></ion-icon>
         <p>Data Organisasi</p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="/forum" class="nav-link">
+        <a href="/forum/forum" class="nav-link">
             <ion-icon name="chatbubbles-sharp"></ion-icon>
         <p>Forum/Diskusi</p>
         </a>
     </li>
     <li class="nav-item">
-        <a href="/berita" class="nav-link">
+        <a href="\berita\berita" class="nav-link">
             <ion-icon name="newspaper"></ion-icon>
         <p>Berita/News</p>
         </a>
