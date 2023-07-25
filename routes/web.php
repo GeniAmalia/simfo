@@ -3,7 +3,6 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,33 +15,16 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-// Route::get('/home', [LoginController::class, 'index']);
-// Route::get('/', function () {
-//     return view('home', [
-//         "title" => "Dashboard"
-//     ]
-// );
-// });
+
 Route::get('/', [HomeController::class, 'index'])->name('Dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('Dashboard');
-
-// Route::get('/login', [LoginController::class, 'index']);
-// Route::get('/regsiter', [RegisterController::class, 'index']);
-// Route::post('/regsiter', [RegisterController::class, 'store']);
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login-proses', [LoginController::class, 'authenticate']); 
-
-Route::get('/register', function() {
-    return view('register', [
-        'title' => 'Register'
-    ]);
-});
-
-Route::post('/register', function() {
-    return view('home', [
+Route::get('/dashboard', function() {
+    return view('dashboard', [
         'title' => 'Dashboard'
     ]);
 });
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
 Route::get('/organisasi', function() {
     return view('organisasi', [
