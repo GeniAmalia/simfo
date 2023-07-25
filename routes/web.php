@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -18,11 +19,7 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', [HomeController::class, 'index'])->name('Dashboard');
 Route::get('/home', [HomeController::class, 'index'])->name('Dashboard');
-Route::get('/dashboard', function() {
-    return view('dashboard', [
-        'title' => 'Dashboard'
-    ]);
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
