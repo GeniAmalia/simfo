@@ -27,7 +27,7 @@ Route::get('/', function () {
 // Route::get('/regsiter', [RegisterController::class, 'index']);
 // Route::post('/regsiter', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'authenticate']); 
+Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
 Route::get('/register', function() {
     return view('register', [
