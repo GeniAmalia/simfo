@@ -37,7 +37,7 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Login to start your session</p>
-        <form action="/login" method="post">
+        <form action="/login-proses" method="post">
             @csrf
             <div class="input-group mb-3">
                 <div class="input-group-append">
@@ -59,7 +59,7 @@
             <span class="fas fa-lock"></span>
             </div>
         </div>
-        <input type="password" class="form-control" placeholder="Password" id="password" required>
+        <input type="password" class="form-control" name="password" placeholder="Password" id="password" value="{{ old ('password') }}" required>
 </div>
 
 <div class="text-center">
