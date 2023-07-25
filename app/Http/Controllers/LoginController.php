@@ -17,20 +17,6 @@ class LoginController extends Controller
     }
     public function authenticate(Request $request)
     {
-<<<<<<< HEAD
-        $credentials = $request->validate([
-            'email'=> 'required|email:dns',
-            'password'=> 'required'
-        ]);
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('/home');
-        }
-
-        return back()->with('LoginError', 'Login Gagal!');
-=======
         $data = User::where('email', '=', $request->input('email'))->first();
         //dd($request->all());
         //dd(Hash::check($request->input('password'), $data->password));
@@ -44,6 +30,5 @@ class LoginController extends Controller
          }else{
            return redirect('/login')->with("error","Password anda salah");
          }
->>>>>>> 4424f5ab9605c18f074585f842994d519cdb7fcd
     }
 }
