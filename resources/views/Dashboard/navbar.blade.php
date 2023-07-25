@@ -8,7 +8,8 @@
     </ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/login" class="nav-link">Logout</a>
+            <a href="/login" class="nav-link">Logout<ion-icon name="log-out-outline"></ion-icon>
+             </a>
         </li>
     </ul>
 </nav>

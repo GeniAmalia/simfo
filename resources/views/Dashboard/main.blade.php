@@ -38,5 +38,8 @@
         <script src="dist/js/adminlte.js?v=3.2.0"></script>
         <script src="dist/js/demo.js"></script>
         <script src="dist/js/pages/dashboard3.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

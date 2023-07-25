@@ -26,7 +26,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/login" class="nav-link">Login</a>
+            <a href="/login" class="nav-link">
+                <ion-icon name="log-in-outline"></ion-icon>Login
+                </a>
         </li>
         </ul>
       </div>
@@ -85,7 +87,7 @@
     <div class="col-lg-3 col-6">
         <div class="small-box bg-danger">
             <div class="inner">
-                <h5>Total Anggota</h5>
+                <h5>Total Users</h5>
                 <p>134</p>
             </div>
         <div class="icon">
@@ -107,6 +109,8 @@
         <script src="plugins/chart.js/Chart.min.js"></script>
         <script src="dist/js/demo.js"></script>
         <script src="dist/js/pages/dashboard3.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
  

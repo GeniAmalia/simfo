@@ -75,9 +75,9 @@
 
 
 <script src="../../plugins/jquery/jquery.min.js"></script>
-
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

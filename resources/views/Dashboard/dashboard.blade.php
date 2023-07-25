@@ -43,7 +43,7 @@
     <div class="col-lg-3 col-6">
         <div class="small-box bg-danger">
             <div class="inner">
-                <h5>Total Anggota</h5>
+                <h5>Total Users</h5>
                 <p>134</p>
             </div>
         <div class="icon">
