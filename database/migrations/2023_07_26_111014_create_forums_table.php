@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('forums', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama_forum');
             $table->string('jumlah_komentar');
+            $table->timestamp('publish_at')->nullable();
             $table->timestamps();
         });
     }
