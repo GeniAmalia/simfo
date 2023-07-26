@@ -32,13 +32,9 @@ Route::resource('/organisasi/organisasi', OrganisasiController::class);
 //     ]);
 // });
 
-Route::get('/forum', function() {
-    return view('forum', [
-        'title' => 'Forum'
-    ]);
+Route::get('/forum/forum', function() {
+    return view('forum/forum');
 });
-Route::get('/berita', function() {
-    return view('berita', [
-        'title' => 'Berita'
-    ]);
+Route::get('/berita/berita', function() {
+    return view('berita/berita');
 });

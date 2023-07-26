@@ -2,7 +2,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <span class="brand-text font-weight-light">
             <center>SIOMA</center></span>
-    </a>
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3">
         <div class="image">

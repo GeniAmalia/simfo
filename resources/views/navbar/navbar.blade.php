@@ -15,9 +15,8 @@
 </nav>
 {{-- sidebar --}}
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <span class="brand-text font-weight-light">
+    <span class="brand-text font-weight-dark">
         <center>SIOMA</center></span>
-</a>
 <div class="sidebar">
     <div class="user-panel mt-3 pb-3 mb-3">
     <div class="image">
@@ -29,7 +28,7 @@
 <nav class="mt-2">
 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 <li class="nav-item">
-    <a href="/" class="nav-link">
+    <a href="/dashboard" class="nav-link">
         <ion-icon name="home-sharp"></ion-icon>
     <p>Dashboard</p>
     </a>
