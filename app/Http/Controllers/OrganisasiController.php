@@ -12,15 +12,22 @@ class OrganisasiController extends Controller
      */
     public function index()
     {
-        return view('organisasi/organisasi');
+        return view('organisasi/organisasi', [
+            'organisasi' => Organisasi::all()
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data = new Organisasi();
+        $data->id_organisasi = $request->input('id-organisasi');
+        $data->organisasi = $request->input('organisasi');
+        $data->jumlah_anggota = $request->input('jumlah_anggota');
+        $data->save();
+        return redirect('organisasi/organisasi');
     }
 
     /**
@@ -36,7 +43,8 @@ class OrganisasiController extends Controller
      */
     public function show(Organisasi $organisasi)
     {
-        //
+        $data = $organisasi::all();
+        return view('organisasi/organisasi', compact('data'));
     }
 
     /**

@@ -26,11 +26,6 @@ Route::post('/login-proses', [LoginController::class, 'authenticate']);
 
 // organisasi
 Route::resource('/organisasi/organisasi', OrganisasiController::class);
-// Route::get('/organisasi', function() {
-//     return view('organisasi', [
-//         'title' => 'Organisasi'
-//     ]);
-// });
 
 Route::get('/forum/forum', function() {
     return view('forum/forum');

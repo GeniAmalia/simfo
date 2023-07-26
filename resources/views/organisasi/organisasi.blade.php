@@ -28,6 +28,14 @@
                                     <th scope="col" class="sort">Jumlah Anggota</th>
                                     <th scope="col">Opsi</th>
                                   </tr>
+                                  <tbody class="list">
+                                    @foreach ($organisasi as $key => $data)
+                                        <tr>
+                                            <th>{{$data->id_organisasi}}</th>
+                                            <th>{{$data->nama_organisasi}}</th>
+                                            <th>{{$data->jumlah_anggota}}</th>
+                                        </tr>
+                                    @endforeach
                                 <td class="project-actions text-right">
                                     <a class="btn btn-primary btn-sm" href="#">
                                         <i class="fas fa-folder"></i>
@@ -44,6 +52,7 @@
                                 </td>
                           </thead>
                 </table>
+            </tbody>
             </div>
         </div>
     </section>
