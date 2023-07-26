@@ -25,7 +25,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
 // organisasi
-Route::resource('/organisasi/organisasi', OrganisasiController::class)->middleware('auth');
+Route::resource('/organisasi/organisasi', OrganisasiController::class);
 // Route::get('/organisasi', function() {
 //     return view('organisasi', [
 //         'title' => 'Organisasi'

@@ -12,8 +12,7 @@ class OrganisasiController extends Controller
      */
     public function index()
     {
-        return 'ini halaman organisasi';
-        // return view('index');
+        return view('organisasi/organisasi');
     }
 
     /**

@@ -14,7 +14,7 @@
     <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
     <li class="nav-item">
-        <a href="/" class="nav-link">
+        <a href="/dashboard" class="nav-link">
             <ion-icon name="home-sharp"></ion-icon>
         <p>Dashboard</p>
         </a>
