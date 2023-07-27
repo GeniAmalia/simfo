@@ -10,7 +10,7 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
                     <li class="breadcrumb-item"><a href="input-organisasi">Tambah Forum</a></li>
                 </ol>
             </div>
@@ -34,7 +34,7 @@
                                     @foreach ($data as $value)
                                         <tr>
                                             <td>{{$value->id}}</td>
-                                            <td>{{$value->nama_forum}}</th>
+                                            <td>{{$value->nama_forum}}</td>
                                             <td>{{$value->jumlah_komentar}}</td>
                                         <td class="budget">
                                         <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>

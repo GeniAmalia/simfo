@@ -5,6 +5,7 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\OrganisasiController;
 
 /*
@@ -34,6 +35,9 @@ Route::resource('/forum/forum', ForumController::class);
 // Route::get('/forum/forum', function() {
 //     return view('forum/forum');
 // });
-Route::get('/berita/berita', function() {
-    return view('berita/berita');
-});
+
+// berita
+Route::resource('/berita/berita', NewsController::class);
+// Route::get('/berita/berita', function() {
+//     return view('berita/berita');
+// });

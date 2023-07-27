@@ -13,7 +13,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $data = News::all();
+            return view('/berita/berita', compact('data'));
     }
 
     /**
