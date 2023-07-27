@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -28,10 +29,11 @@ Route::post('/login-proses', [LoginController::class, 'authenticate']);
 Route::resource('/organisasi/organisasi', OrganisasiController::class);
 
 
-
-Route::get('/forum/forum', function() {
-    return view('forum/forum');
-});
+// forum
+Route::resource('/forum/forum', ForumController::class);
+// Route::get('/forum/forum', function() {
+//     return view('forum/forum');
+// });
 Route::get('/berita/berita', function() {
     return view('berita/berita');
 });

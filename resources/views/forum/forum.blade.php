@@ -28,23 +28,24 @@
                                     <th scope="col" class="sort">Nama Forum</th>
                                     <th scope="col" class="sort">Jumlah Komentar</th>
                                     <th scope="col">Opsi</th>
-                                  </tr>
-                                <td class="project-actions text-right">
-                                    <a class="btn btn-primary btn-sm" href="#">
-                                        <i class="fas fa-folder"></i>
-                                        View
-                                    </a>
-                                    <a class="btn btn-info btn-sm" href="#">
-                                        <i class="fas fa-pencil-alt"></i>
-                                        Edit
-                                    </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash"></i>
-                                        Delete
-                                    </a>
-                                </td>
-                          </thead>
-                </table>
+                            </tr>
+                            </thead>
+                                  <tbody class="list">
+                                    @foreach ($data as $value)
+                                        <tr>
+                                            <td>{{$value->id}}</td>
+                                            <td>{{$value->nama_forum}}</th>
+                                            <td>{{$value->jumlah_komentar}}</td>
+                                        <td class="budget">
+                                        <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
+                                        View</button></form>&nbsp;<form action=/edit method="POST">@csrf<button class="btn btn-info btn-sm"><ion-icon name="pencil"></ion-icon>
+                                        Edit</button></form>&nbsp;<form action="/delete" method="POST">@csrf<button class="btn btn-danger btn-sm"><ion-icon name="trash"></ion-icon>
+                                        Delete</button></form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                @endforeach
+                    </table>
             </div>
         </div>
     </section>

@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Forum extends Model
 {
     use HasFactory;
+    /**
+     * The table associated with the model.
+     * 
+     * @var string
+     */
+    protected $table = 'forums';
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'nama_forum',
+        'jumlah_komentar',
+    ];
 }

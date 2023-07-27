@@ -12,8 +12,10 @@ class ForumController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    {   
+            $data = Forum::all();
+            return view('/forum/forum', compact('data'));
+        
     }
 
     /**
