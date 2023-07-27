@@ -24,8 +24,10 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login-proses', [LoginController::class, 'authenticate']); 
 
-// organisasi
+// // organisasi
 Route::resource('/organisasi/organisasi', OrganisasiController::class);
+
+
 
 Route::get('/forum/forum', function() {
     return view('forum/forum');

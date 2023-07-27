@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Organisasi;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreOrganisasiRequest;
+use App\Http\Requests\UpdateOrganisasiRequest;
 
 class OrganisasiController extends Controller
 {
@@ -12,28 +13,22 @@ class OrganisasiController extends Controller
      */
     public function index()
     {
-        return view('organisasi/organisasi', [
-            'organisasi' => Organisasi::all()
-        ]);
+        $data = Organisasi::all();
+        return view('/organisasi/organisasi', compact('data'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        $data = new Organisasi();
-        $data->id_organisasi = $request->input('id-organisasi');
-        $data->organisasi = $request->input('organisasi');
-        $data->jumlah_anggota = $request->input('jumlah_anggota');
-        $data->save();
-        return redirect('organisasi/organisasi');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreOrganisasiRequest $request)
     {
         //
     }
@@ -43,8 +38,8 @@ class OrganisasiController extends Controller
      */
     public function show(Organisasi $organisasi)
     {
-        $data = $organisasi::all();
-        return view('organisasi/organisasi', compact('data'));
+        $data = Organisasi::all();
+        return view('/organisasi/detail-organisasi');
     }
 
     /**
@@ -58,7 +53,7 @@ class OrganisasiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Organisasi $organisasi)
+    public function update(UpdateOrganisasiRequest $request, Organisasi $organisasi)
     {
         //
     }
