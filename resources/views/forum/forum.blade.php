@@ -34,19 +34,20 @@
                                     @foreach ($data as $value)
                                         <tr>
                                             <td>{{$value->id}}</td>
-                                            <td>{{$value->nama_forum}}</td>
+                                            <td>{{$value->judul_forum}}</td>
                                             <td>{{$value->jumlah_komentar}}</td>
-                                        <td class="budget">
-                                        <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
-                                        View</button></form>&nbsp;<form action=/edit method="POST">@csrf<button class="btn btn-info btn-sm"><ion-icon name="pencil"></ion-icon>
-                                        Edit</button></form>&nbsp;<form action="/delete" method="POST">@csrf<button class="btn btn-danger btn-sm"><ion-icon name="trash"></ion-icon>
-                                        Delete</button></form>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                                @endforeach
-                    </table>
-            </div>
-        </div>
-    </section>
-    @endsection
+                                            <td class="budget">
+                                                <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
+                                                    View</button></form>&nbsp;<form action=/edit method="POST">@csrf<button class="btn btn-info btn-sm"><ion-icon name="pencil"></ion-icon>
+                                                        Edit</button></form>&nbsp;<form action="/delete" method="POST">@csrf<button class="btn btn-danger btn-sm"><ion-icon name="trash"></ion-icon>
+                                                            Delete</button></form>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                @endforeach
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                                @endsection
+                               

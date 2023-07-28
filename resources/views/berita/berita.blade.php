@@ -33,7 +33,7 @@
                                     @foreach ($data as $value)
                                         <tr>
                                             <td>{{$value->id}}</td>
-                                            <td>{{$value->nama_berita}}</td>
+                                            <td>{{$value->judul_berita}}</td>
                                         <td class="budget">
                                         <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
                                         View</button></form>&nbsp;<form action=/edit method="POST">@csrf<button class="btn btn-info btn-sm"><ion-icon name="pencil"></ion-icon>

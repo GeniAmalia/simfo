@@ -20,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'jenis_user',
         'password',
     ];
 
@@ -47,5 +48,13 @@ class User extends Authenticatable
         return asset ('assets/img/img.jpg');
       }
         return asset ('images/'.$this->foto_profil);
+    }
+    public function organisasis()
+    {
+        return $this->belongsTo(Organisasi::class);
+    }
+    public function forums()
+    {
+        return $this->hasMany(Forum::class);
     }
 }

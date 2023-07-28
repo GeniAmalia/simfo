@@ -15,6 +15,7 @@ class OrganisasiController extends Controller
     {
         $data = Organisasi::all();
         return view('/organisasi/organisasi', compact('data'));
+       
     }
 
     /**

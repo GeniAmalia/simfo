@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('organisasis', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_anggota');
             $table->string('nama_organisasi');
             $table->string('jumlah_anggota');
+            $table->longText('struktur');
             $table->timestamps();
+
+            $table->foreign('id_anggota')->references('id')->on('users');
         });
     }
-
     /**
      * Reverse the migrations.
      */
@@ -26,4 +29,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('organisasis');
     }
+    
 };

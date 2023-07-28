@@ -20,7 +20,20 @@ class Forum extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'nama_forum',
+        'id_anggota',
+        'id_organisasi',
+        'Judul_forum',
+        'isi',
         'jumlah_komentar',
+        'created_at',
+        'updated_at'
     ];
+    public function organisasis()
+    {
+        return $this->belongsTo(Organisasi::class);
+    }
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

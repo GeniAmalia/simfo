@@ -20,6 +20,14 @@ class News extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'nama_berita',
+        'id_organisasi',
+        'judul_berita',
+        'isi',
+        'created_at', 
+        'updated_at'
     ];
+    public function organisasis()
+    {
+        return $this->belongsTo(Organisasi::class);
+    }
 }

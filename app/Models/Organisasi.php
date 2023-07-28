@@ -21,6 +21,27 @@ class Organisasi extends Model
      */
     protected $fillable = [
         'nama_organisasi',
+        'id_anggota',
         'jumlah_anggota',
+        'struktur',
+        'anggota',
+        'created_at', 
+        'updated_at'
     ];
+     /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function Users()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function Forums()
+    {
+        return $this->hasMany(Forum::class);
+    }
+    public function News()
+    {
+        return $this->hasMany(News::class);
+    }
 }

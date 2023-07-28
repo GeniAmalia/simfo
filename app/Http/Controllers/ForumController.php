@@ -15,6 +15,7 @@ class ForumController extends Controller
     {   
             $data = Forum::all();
             return view('/forum/forum', compact('data'));
+   
         
     }
 

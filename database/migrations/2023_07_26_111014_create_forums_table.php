@@ -13,10 +13,16 @@ return new class extends Migration
     {
         Schema::create('forums', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_forum');
-            $table->string('jumlah_komentar');
+            $table->unsignedBigInteger('id_anggota');
+            $table->unsignedBigInteger('id_organisasi');
+            $table->string('judul_forum');
+            $table->longText('isi');
+            $table->longText('jumlah_komentar');
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('id_anggota')->references('id')->on('users');
+            $table->foreign('id_organisasi')->references('id')->on('organisasis');
         });
     }
 

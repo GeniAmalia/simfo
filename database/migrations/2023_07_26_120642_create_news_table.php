@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_berita');
-            $table->timestamp('publish_at')->nullable();
+            $table->unsignedBigInteger('id_organisasi');
+            $table->string('judul_berita');
+            $table->longText('isi');
             $table->timestamps();
+
+            $table->foreign('id_organisasi')->references('id')->on('organisasi');
         });
     }
 

@@ -29,9 +29,9 @@ Route::post('/login-proses', [LoginController::class, 'authenticate']);
 // // organisasi
 Route::resource('/organisasi/organisasi', OrganisasiController::class);
 
-
 // forum
 Route::resource('/forum/forum', ForumController::class);
+
 // Route::get('/forum/forum', function() {
 //     return view('forum/forum');
 // });
