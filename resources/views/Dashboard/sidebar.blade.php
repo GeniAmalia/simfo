@@ -37,7 +37,7 @@
         </a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-        <a href="/about" class="nav-link">
+        <a href="/about/about" class="nav-link">
             <ion-icon name="information-circle-sharp"></ion-icon>
             <p>About</p>
             </a>

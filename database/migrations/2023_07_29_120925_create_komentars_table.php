@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('forums', function (Blueprint $table) {
+        Schema::create('komentars', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_anggota');
             $table->unsignedBigInteger('id_organisasi');
-            $table->string('judul_forum');
+            $table->unsignedBigInteger('id_forum');
             $table->longText('isi');
-            $table->timestamp('publish_at')->nullable();
             $table->timestamps();
 
             $table->foreign('id_anggota')->references('id')->on('users');
             $table->foreign('id_organisasi')->references('id')->on('organisasis');
+            $table->foreign('id_forum')->references('id')->on('forums');
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('forums');
+        Schema::dropIfExists('komentars');
     }
 };

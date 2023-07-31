@@ -13,6 +13,7 @@
         </li>
     </ul>
 </nav>
+
 {{-- sidebar --}}
 <aside class="main-sidebar sidebar-dark-primary elevation-6">
     <span class="brand-text font-weight-dark">
@@ -51,8 +52,8 @@
     <p>Berita/News</p>
     </a>
 </li>
-<li class="nav-item d-none d-sm-inline-block">
-    <a href="/about" class="nav-link">
+<li class="nav-item">
+    <a href="/about/about" class="nav-link">
         <ion-icon name="information-circle-sharp"></ion-icon>
         <p>About</p>
         </a>

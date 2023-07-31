@@ -17,9 +17,11 @@
 
         @include('navbar.navbar')
 </div>
-// {{-- content --}}
-    @yield('container')
-    
+
+{{-- content --}}
+
+        @yield('container')
+
         <script src="{{ asset ('plugins/jquery/jquery.min.js')}}"></script>
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{ asset('dist/js/adminlte.js?v=3.2.0')}}"></script>

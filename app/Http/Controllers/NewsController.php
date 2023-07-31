@@ -22,7 +22,8 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        $data = News::all();
+            return view('/berita/input-berita', compact('data'));
     }
 
     /**

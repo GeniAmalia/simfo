@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\HomeController;
@@ -32,6 +33,8 @@ Route::resource('/organisasi/organisasi', OrganisasiController::class);
 // forum
 Route::resource('/forum/forum', ForumController::class);
 
+// Komentar
+
 // Route::get('/forum/forum', function() {
 //     return view('forum/forum');
 // });
@@ -41,3 +44,6 @@ Route::resource('/berita/berita', NewsController::class);
 // Route::get('/berita/berita', function() {
 //     return view('berita/berita');
 // });
+
+// about
+Route::get('/about/about', [AboutController::class, 'index'])->name('About');

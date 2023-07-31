@@ -24,7 +24,8 @@ class ForumController extends Controller
      */
     public function create()
     {
-        //
+        $data = Forum::all();
+        return view('forum/input-forum', compact('data'));
     }
 
     /**
@@ -40,7 +41,7 @@ class ForumController extends Controller
      */
     public function show(Forum $forum)
     {
-        //
+        return view('forum.show', compact('forum'));
     }
 
     /**
@@ -56,7 +57,7 @@ class ForumController extends Controller
      */
     public function update(UpdateForumRequest $request, Forum $forum)
     {
-        //
+        
     }
 
     /**

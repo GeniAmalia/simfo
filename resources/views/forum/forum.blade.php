@@ -11,7 +11,7 @@
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-                    <li class="breadcrumb-item"><a href="input-organisasi">Tambah Forum</a></li>
+                    <li class="breadcrumb-item"><a href="{{route('forum.create')}}">Tambah Forum</a></li>
                 </ol>
             </div>
         </div>
@@ -26,7 +26,6 @@
                             <tr>
                                     <th scope="col" class="sort">No.</th>
                                     <th scope="col" class="sort">Nama Forum</th>
-                                    <th scope="col" class="sort">Jumlah Komentar</th>
                                     <th scope="col">Opsi</th>
                             </tr>
                             </thead>
@@ -35,12 +34,10 @@
                                         <tr>
                                             <td>{{$value->id}}</td>
                                             <td>{{$value->judul_forum}}</td>
-                                            <td>{{$value->jumlah_komentar}}</td>
                                             <td class="budget">
-                                                <form action="/organisasi/detail-organisasi" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
-                                                    View</button></form>&nbsp;<form action=/edit method="POST">@csrf<button class="btn btn-info btn-sm"><ion-icon name="pencil"></ion-icon>
-                                                        Edit</button></form>&nbsp;<form action="/delete" method="POST">@csrf<button class="btn btn-danger btn-sm"><ion-icon name="trash"></ion-icon>
-                                                            Delete</button></form>
+                                                <p>{{ \Illuminate\Support\Str::limit($post->content, 200) }}</p>
+                                                <form action="{{ route('forum.show', $post->id) }}" method="POST">@csrf<button class="btn btn-primary btn-sm"><ion-icon name="folder-open"></ion-icon>
+                                                    Readmore...</button></form>
                                                         </td>
                                                     </tr>
                                                 </tbody>
