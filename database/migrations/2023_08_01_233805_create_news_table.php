@@ -11,23 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('organisasis', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_anggota');
-            $table->string('nama_organisasi');
-            $table->string('jumlah_anggota');
-            $table->longText('struktur');
+            $table->unsignedBigInteger('id_organisasi');
+            $table->string('judul_berita');
+            $table->longText('isi');
             $table->timestamps();
 
-            $table->foreign('id_anggota')->references('id')->on('users');
+            $table->foreign('id_organisasi')->references('id')->on('organisasis');
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('organisasis');
+        Schema::dropIfExists('news');
     }
-    
 };
